@@ -1,3 +1,157 @@
+/*
+author 		github.com/lierante
+repository	github.com/lierante/caramel
+created		06/21/2021
+published	07/15/2021
+license		MIT License
+*/
+
+/* note */
+/* make sure your wm doesnt have a titlebar on
+/* turn on titlebar in ff customize page
+/* turn on compact mode, turn off the default light theme
+/* the theme turns off the visibility of toolbar items, you can modify it
+/* the css only supports ff versions from 84 to 87
+/* is this css finished? no, i need help getting rid of the zoom toolbar line
+/* even if the toolbar items were set to opacity:0, the zoom toolbar line would still appear
+/* https://user-images.githubusercontent.com/58134273/125809487-19ac3ce5-f4e1-43c5-bf4e-6fb7f39023c9.png */
+*/
+
 :root {
-    --set-display:none;
+  --mff-bg: #5e5142;
+  --mff-url-bg: var(--mff-bg);
+  --mff-tab-height: 18px;
+  --mff-tab-font-family: "Cherry";
+  --mff-tab-font-size: 12px;
+  --mff-color: #cacaca;
+ }
+
+/* tab */
+
+hbox.tab-content .tab-icon-image,
+.tab-line, .tab-icon-sound,
+.tab-close-button {
+  display: none !important;
+}
+
+.tab-text {
+  font-family: var(--mff-tab-font-family);
+  font-weight: var(--mff-tab-font-weight);
+  font-size: var(--mff-tab-font-size) !important;
+  color: #994488;
+}
+
+.tab-background {
+  opacity:0.90;
+  background: #eee8dd !important;
+  border: 0px solid #ffffff !important;
+  border-radius: 0px;
+}
+
+.tabbrowser-tab {
+  border-width: 0;
+  height: var(--mff-tab-height) !important;
+  margin-bottom: 4px !important;
+  margin-inline-end: 5px !important;
+  margin-top: 4px !important;
+  max-height: var(--mff-tab-height) !important;
+  min-height: var(--mff-tab-height) !important;
+}
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  border-left: none !important;
+}
+
+#tabbrowser-tabs {
+  --tab-loading-fill: var(--mff-color) !important;
+}
+
+/* urlbar */
+
+image#pocket-button,
+image#star-button,
+image#pageActionButton,
+#tracking-protection-icon-container, #identity-box {
+  display: none;
+}
+
+.urlbarView-favicon, .urlbarView-type-icon {
+  display: none !important;
+}
+
+.urlbarView-url, .search-panel-one-offs-container {
+  color: var(--mff-color) !important;
+}
+
+#urlbar-input {
+  font-size:13px !important;
+  color: var(--mff-color) !important;
+  font-family: var(--mff-tab-font-family) !important;
+  border-left:7px solid var(--mff-bg) !important;
+}
+
+#urlbar-background {
+  background-color: var(--mff-url-bg) !important;
+  border: none !important;
+  opacity: .90 !important;
+}
+
+#urlbar {
+  height: 0px;
+  border: none !important;
+  border-radius: 0px !important;
+  max-width: 80% !important;
+  margin-left: 2px!important;
+  margin-top: 2px!important;
+/* 	position: unset!important; */
+}
+
+/* menu */ 
+
+ menu, menulist, menuitem { 
+  color: var(--mff-color) !important;
+  font-family: var(--mff-tab-font-family); 
+  font-size: 11px !important;
+}
+
+/*  toolbar  */
+
+#back-button,
+#forward-button {
+ display:none;
+}
+
+#titlebar {
+  border-left:7px solid var(--mff-bg) !important;
+  -moz-box-ordinal-group: 2 !important;
+}
+
+toolbar#nav-bar {
+  border-left:0px solid var(--mff-color) !important;
+  height: 24px;
+  background-color: var(--mff-url-bg) !important;
+}
+
+#navigator-toolbox, toolbaritem {
+  border: none !important;
+}
+
+toolbarbutton {
+  opacity:0;
+  box-shadow: none !important;
+}
+
+/* other */ 
+
+#main-window, .titlebar-button {
+  background-color: var(--mff-bg) !important;
+}
+
+.titlebar-button:hover {
+ background-color: var(--mff-bg) !important;
+}
+
+#titlebar-close:hover > .toolbarbutton-icon {
+list-style-image: url(“”) !important;
 }
