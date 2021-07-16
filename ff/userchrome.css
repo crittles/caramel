@@ -15,7 +15,6 @@ license		MIT License
 /* is this css finished? no, i need help getting rid of the zoom toolbar line
 /* even if the toolbar items were set to opacity:0, the zoom toolbar line would still appear
 /* https://user-images.githubusercontent.com/58134273/125809487-19ac3ce5-f4e1-43c5-bf4e-6fb7f39023c9.png */
-*/
 
 :root {
   --mff-bg: #5e5142;
