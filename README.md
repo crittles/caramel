@@ -1,4 +1,4 @@
-# caramel 🎨☕
+# caramel ☕
 
 ![img](preview.gif)
 
