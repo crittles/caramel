@@ -307,7 +307,7 @@ ytd-button-renderer.style-suggestive[is-paper-button] {
 #chips-wrapper.ytd-feed-filter-chip-bar-renderer {
     position: fixed;
     top: 35px;
-    width: 940px;
+    width: 90%;
     z-index: 2000;
     background-color: var(--yt-spec-general-background-a);
     border-top: 0px solid var(--yt-spec-10-percent-layer);
