@@ -12,9 +12,7 @@ license		MIT License
 /* turn on compact mode, turn off the default light theme
 /* the theme turns off the visibility of toolbar items, you can modify it
 /* the css only supports ff versions from 84 to 87
-/* is this css finished? no, i need help getting rid of the zoom toolbar line
-/* even if the toolbar items were set to opacity:0, the zoom toolbar line would still appear
-/* https://user-images.githubusercontent.com/58134273/125809487-19ac3ce5-f4e1-43c5-bf4e-6fb7f39023c9.png */
+/* is this css finished? no */
 
 :root {
   --mff-bg: #5e5142;
@@ -137,6 +135,7 @@ toolbar#nav-bar {
 }
 
 toolbarbutton {
+  color: var(--mff-bg) !important;
   opacity:0;
   box-shadow: none !important;
 }
