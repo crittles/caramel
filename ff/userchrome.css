@@ -21,6 +21,7 @@ license		MIT License
   --mff-tab-font-family: "Cherry";
   --mff-tab-font-size: 12px;
   --mff-color: #cacaca;
+  --urlbar-separator-color: transparent !important;
  }
 
 /* tab */
@@ -79,6 +80,10 @@ image#pageActionButton,
 
 .urlbarView-url, .search-panel-one-offs-container {
   color: var(--mff-color) !important;
+}
+
+#urlbar-zoom-button { /* sides with --urlbar-separator-color: transparent !important; */
+ display:none !important; /* remove zoom stuff in the url */
 }
 
 #urlbar-input {
