@@ -135,8 +135,7 @@ toolbar#nav-bar {
 }
 
 toolbarbutton {
-  color: var(--mff-bg) !important;
-  opacity:0;
+  opacity:1;
   box-shadow: none !important;
 }
 
