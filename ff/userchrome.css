@@ -3,6 +3,7 @@ author 		github.com/lierante
 repository	github.com/lierante/caramel
 created		06/21/2021
 published	07/15/2021
+updated   07/20/2021
 license		MIT License
 */
 
@@ -18,7 +19,7 @@ license		MIT License
   --mff-bg: #5e5142;
   --mff-url-bg: var(--mff-bg);
   --mff-tab-height: 18px;
-  --mff-tab-font-family: "Cherry";
+  --mff-tab-font-family: "CozetteVector";
   --mff-tab-font-size: 12px;
   --mff-color: #cacaca;
   --urlbar-separator-color: transparent !important;
