@@ -197,7 +197,7 @@ ytd-channel-renderer[use-prominent-thumbs] yt-img-shadow.ytd-channel-renderer,
 #avatar.ytd-c4-tabbed-header-renderer/* channel effect */ {
     border-radius:5px; outline:1px solid #000;
 }
-
+#background.tp-yt-app-header,
 ytd-c4-tabbed-header-renderer[has-channel-art] .banner-visible-area.ytd-c4-tabbed-header-renderer { /* channel cover remove */
     height: calc(100vw / 6.2 - 1px);
     display:none;
