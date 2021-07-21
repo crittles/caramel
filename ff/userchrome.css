@@ -15,7 +15,7 @@ license		MIT License
 /* is this css finished? no */
 
 :root {
-  --mff-bg: #5e5142;
+  --mff-bg: #5a503f;
   --mff-url-bg: var(--mff-bg);
   --mff-tab-height: 18px;
   --mff-tab-font-family: "CozetteVector";
@@ -160,4 +160,12 @@ toolbarbutton {
 
 #titlebar-close:hover > .toolbarbutton-icon {
 list-style-image: url(“”) !important;
+}
+
+.private-browsing-indicator { 
+ display: none 
+}
+
+::-moz-selection {
+ background-color: #f2e1ac !important;
 }
