@@ -3,52 +3,24 @@ author 		github.com/lierante
 repository	github.com/lierante/caramel
 created		06/06/2021
 published	07/13/2021
-updated		07/17/2021, from version 0.0.1 to 0.0.2
+updated		07/22/2021, from version 0.0.2 to 0.0.3
 license		MIT License
 */
 
-July 17, 2021
-0.0.2 
-  - changed patterns of code (still messy code but improved it a bit)
-	- introducing caramel compact group
-	  + removal of some stuff that i dont want it visible in the screen
-	- limited use of caramel color palette
-	- font size changes
-	- settings, ui changes 
-	  + settings next to sign in button are now visible
-	- like, share, save interaction and some appearance changes
-	  + the repository preview gif is displayed in the top of share or embed view
-	  + like and dislike interactions are added in the comments section
-	     under the users avatar
-	- new video page, main video page, video info or description layout changes
-	  + removed author avatar in video info
-	- new video page, right list video design (inspired by film strip tapes)
-	  + videos, live videos are connected except playlist and mix thing
-	  + playlist and mix thing thumbnail removed, turned into text boxes
-	- inside video page, video player changes
-	  + video timer appearance and position is changed
-	  + removed author floating avatar inside the video player
-	- new playlist/uploaders playlist box appearance
-	  + changed their progress bar into an animated rainbow gif thing
-	- channel page section redesign
-	  + added border of channel page introduction video player
-	  + the video thumbnails padding there should be fine now
-	- new notifications popup box
-	  + the notifications popup box is positioned in the top left of the screen
-	- new live chat appearance
-	  + you can open the live chat by pressing that button with its hidden text
-	- search page layout and search page video thumbnail size changes
-	- new search bar appearance and suggestions display (inspired by dmenu, rofi customizations)
-	  + removes border when interacting with the searchbar input focus
-	  + the search suggestions box is positioned under the video page video player
-	- homepage changes
-	  + category bar is now visible
-	  + changed the video box border from scrollbar to an actual border, also a reduced
-	      height of the border
-
-July 17, 2021
-0.0.2
-  - homepage issue resolved
-(2) + fixed homepage category bar limiting width in fullscreen
-(3) + removes the state of homepage video thumbnail from staying
-	     its non fullscreen size in fullscreen
+July 22, 2021
+0.0.3
+  - changed patterns of code (still messy code but improved it a bit, this was a way to try and make other sections portable so progress is easy when moving it to other css)
+  	- new caramel color palette
+	- more thumbnails become visible
+	- changed appearance of like, dislike & comment heart renderer
+	- like, dislike & save interactions no longer popup as a guest
+	- new share interaction appearance and layout, made something simpler
+	- removed playlist, mix stuff, movie thumbnail and meta in the right side of main video page
+	- removed a bunch of stuff in channel page home, except for alternative channel sections
+	- updated channel page, channel author social links are visible only when hover under the sign in stuff
+	- new channel page playlist thumbnail
+	- search page appearance and layout changes
+	- settings, ui & size changes
+	- fixed homepage thumbnails lose their height when resizing or in fullscreen mode
+	- temporary removal of homepage category section
+	- temporary removal of subscribe button in channel page, you can modify and enable it back
