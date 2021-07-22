@@ -55,10 +55,6 @@ body {
     color: var(--caramel-4);
 }
 
-#input-field.wrong {
-    background:#e7baba;
-}
-
 #input-field {
     color: #1a1a1a;
     background-color:var(--caramel-3); 
