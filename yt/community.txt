@@ -22,5 +22,6 @@ July 22, 2021
 	- search page appearance and layout changes
 	- settings, ui & size changes
 	- fixed homepage thumbnails lose their height when resizing or in fullscreen mode
+	- new live chat appearance
 	- temporary removal of homepage category section
 	- temporary removal of subscribe button in channel page, you can modify and enable it back
