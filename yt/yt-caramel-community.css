@@ -319,8 +319,7 @@ tp-yt-paper-tab.iron-selected.ytd-c4-tabbed-header-renderer  {
 }
 
 #channel-header-container.ytd-c4-tabbed-header-renderer #button.ytd-button-renderer { /* sub button */
-    display:none;
-    border:1px solid #000;
+    display:block;
 }
 
 #tabsContent.tp-yt-paper-tabs {
