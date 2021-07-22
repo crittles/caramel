@@ -3,166 +3,544 @@ author 		github.com/lierante
 repository	github.com/lierante/caramel
 created		06/06/2021
 published	07/13/2021
-updated		07/17/2021, from version 0.0.1 to 0.0.2
+updated		07/22/2021, from version 0.0.2 to 0.0.3
 license		MIT License
-*/
-
-/* note */
-/* my english is really bad but ill try
-/* this is still incomplete
-/* the theme was only meant for me but wanted to share it
-/* sorry if the look in the picture doesnt match yours
-/* it might be a font or layout problem
-/*
-/* only firefox is supported, using the css on chrome will have issues
-/* if you want the css working on chrome, then contribute
-/* you can contribute to improve the code and fix messy stuff here :)
-/*
-/* download & install the font
-/* https://github.com/slavfox/Cozette/releases/download/v.1.11.3/CozetteVector.ttf
 */
 
 :root {
     /* disable */
-    --shadow-elevation-16dp_-_box-shadow:none !important;
-    /* bar */
-    --ytd-searchbox-text-color:var(--yt-spec-text-primary) !important;
-    /* global */
-    --font-insert:"CozetteVector";
-    --paper-font-common-base_-_font-family:var(--font-insert);
-    --yt-spec-text-primary: #000 !important;
-    --yt-spec-text-secondary:var(--yt-spec-text-primary) !important;
-    --yt-spec-static-overlay-text-primary:#000 !important;
-    --yt-spec-call-to-action:var(--yt-spec-text-primary) !important;
-    --bg-caramel-1:var(--yt-spec-general-background-a);
-    --bg-caramel-3: #e0dad0;
-    --bg-caramel-4: #ebebeb;
-    --ff-toolbar-bg:#5e5142;
-    --yt-spec-general-background:#eee8dd !important;
-    --yt-spec-general-background-a: #eee8dd !important;
-    --yt-spec-general-background-ab:#e2dbcc !important;    /* description section */
-    --yt-spec-10-percent-layer: rgba(0, 0, 0, 0) !important;
-    --yt-button-icon-button-text-color:var(--yt-spec-text-primary);
-    /* homepage */
-    --yt-spec-brand-background-primary:var(--yt-spec-general-background-a) !important;
-    /* channel section*/
-    --yt-spec-general-background-b: var(--yt-spec-general-background-a) !important;
-    --yt-spec-brand-button-background:var(--yt-spec-general-background-a) !important; /* subscribe button background */
-    /* playlist */
-    --yt-spec-badge-chip-background:transparent !important;
-    --yt-spec-icon-disabled:transparent !important; /* color of that scrollbar */
-    --yt-spec-static-brand-red:var(--yt-spec-text-primary) !important; /* playlist thumbnail progress bar color */
+   --shadow-elevation-16dp_-_box-shadow:none !important;
+    /* caramel palette */
+   --bg-caramel-1:#eee8dd;
+   --bg-caramel-2:#e2dbcc;
+   --bg-caramel-3:#b1a592;
+   --bg-caramel-4:#837a6c;
+   --ff-toolbar-bg:#5a503f;
+   --yt-spec-general-background-a:var(--bg-caramel-1) !important;
+   --yt-spec-general-background-b: var(--bg-caramel-1) !important;
+   --yt-spec-10-percent-layer:rgba(0, 0, 0, 0) !important;
+    /* text */
+   --font-insert:"CozetteVector";
+   --paper-font-common-base_-_font-family:var(--font-insert);
+   --fn-caramel-1:#000;
+   --yt-spec-text-primary:var(--fn-caramel-1) !important;
+   --yt-spec-text-secondary:var(--yt-spec-text-primary) !important;
+   --yt-spec-static-overlay-text-primary:#000 !important;
+   --yt-spec-call-to-action:var(--yt-spec-text-primary) !important;
+   --yt-button-color:var(--yt-spec-text-primary);
+   --yt-button-icon-button-text-color:var(--yt-spec-text-primary);
+     /* channel */
+   --yt-spec-static-overlay-background-medium-light:var(--bg-caramel-1) !important; /* link holder bg */
     /* live */
-    --yt-button-color:var(--yt-spec-text-primary);
-    --yt-live-chat-vem-background-color:#313131 !important;
-    --yt-live-chat-banner-gradient-scrim:transparent !important;
-    --yt-spec-brand-link-text:var(--yt-spec-text-primary) !important;
+   --yt-spec-brand-background-primary:var(--bg-caramel-1) !important;
+    --yt-live-chat-vem-background-color:var(--yt-live-chat-background-color) !important;
+        --yt-live-chat-action-panel-background-color:#613333 !important;
+    --yt-live-chat-banner-gradient-scrim:var(--bg-caramel-1)
     /* live author */
     --yt-live-chat-secondary-text-color:var(--yt-spec-text-primary) !important;
-    --yt-live-chat-primary-text-color:#736b6b !important;  
+    --yt-live-chat-primary-text-color:#736b6b !important; 
+    --yt-live-chat-moderator-color:#dc730d !important;
+    --yt-live-chat-author-chip-owner-background-color:#c0bbbb !important;
+    --yt-live-chat-message-highlight-background-color:#dcd7d7 !important;
+    /* other */
+   --yt-spec-badge-chip-background:transparent !important;
+   --yt-spec-icon-disabled:transparent !important;
+   --yt-spec-icon-inactive:#0000 !important; /* this border */
+   --yt-spec-static-brand-red:var(--yt-spec-text-primary) !important;
+   --yt-spec-themed-blue:var(--fn-caramel-1) !important; /*about*/
+   --yt-spec-suggested-action:var(--bg-caramel-1) !important; /*broadcast thing above main page video title */  
     /* popup */
-    --iron-overlay-backdrop-opacity:0.2 !important;
-    --iron-overlay-backdrop-background-color:#414141;
-    --yt-spec-brand-background-solid:var(--yt-spec-general-background-a) !important;
-    /* alternative global */
-    --ytd-user-comment_-_font-size:15px !important;
-    /*--ytd-user-comment_-_line-height:5px !important; */
-    --ytd-user-comment_-_letter-spacing:0px !important; /* disable default letter spacing */
-    
-        /* alternative video page position */
-    /* this one is strange but a lazy way to position video layout */
-    --ytd-toolbar-height:36px !important;
+   --iron-overlay-backdrop-opacity:0.2 !important;
+   --iron-overlay-backdrop-background-color:#414141;
+   --yt-spec-brand-background-solid:var(--bg-caramel-1) !important;
+    /* text adjust */
+   --ytd-user-comment_-_font-size:15px !important;
+   --ytd-user-comment_-_letter-spacing:0px !important;
+    /* tool */
+   --ytd-toolbar-height:36px !important;
 }
-
-/* entry */
 
 ytd-app {
    font-family:var(--font-insert);
 }
 
-ytd-button-renderer #button.ytd-button-renderer {
-    background-color:var(--yt-spec-general-background-a);
-}
-
-#button.ytd-toggle-button-renderer {
-    margin-right:1px; /* just like padding, this applies in global */
-    margin-bottom:5px;
-}
-
 /* bar */
 
-#container.ytd-searchbox { 
-    /* it refuses to var with (--yt-spec-general-background-a) when set to theater mode */
+#container.ytd-searchbox,
+ytd-button-renderer #button.ytd-button-renderer, /*sign in */
+ytd-searchbox[has-focus] #container.ytd-searchbox { 
     background-color:var(--bg-caramel-1) !important;
     border: none;
     box-shadow:none;
 }
 
+/* container & search bar */ ::-moz-placeholder,
+#search-icon-legacy.ytd-searchbox ,#search-icon-legacy.ytd-searchbox:hover {
+    opacity:0;
+}
+
 #container.ytd-searchbox input.ytd-searchbox {
-    /* theater mode searchbox */
     font-family:var(--font-insert);
-    color: #000;
+    color:var(--fn-caramel-1);
 }
 
-ytd-searchbox[has-focus] #container.ytd-searchbox {
-    /* took me long to find you huh */
-    border:none;
-    box-shadow:none;
-}
-
-#container.ytd-masthead {
-    /* this stuff refuses to var with (--yt-spec-general-background-a) */
+#container.ytd-masthead { /* theater bar */
     background-color:var(--bg-caramel-1) !important;
     height:42px;
 }
 
-::-moz-placeholder,
-#search-icon-legacy.ytd-searchbox ,#search-icon-legacy.ytd-searchbox:hover{
-    opacity:  0;
+ytd-topbar-menu-button-renderer yt-icon, #button.ytd-topbar-menu-button-renderer { /* non visible settings next to sign in stuff */
+    display:block !important; opacity:1;
 }
 
-ytd-topbar-menu-button-renderer yt-icon, #button.ytd-topbar-menu-button-renderer { /* non visible settings next to sign in stuff */
-    display:block !important;
+/* home page */
+
+#contents.ytd-rich-grid-renderer {
+    margin-top: -30px; /* this is being watched, bc its weird */
+    margin-left:-40px;
+    justify-content: center;
+    --ytd-rich-grid-items-per-row: 4;
+}
+
+ytd-thumbnail-overlay-endorsement-renderer {
+    /* she has also viewed this channel:hover */
+    outline:1px solid #000;
+}
+
+ytd-rich-grid-renderer ytd-thumbnail-overlay-time-status-renderer { /* homepage efect */
+    outline:1px solid #000;
+    left:-8px;
+    margin-bottom: -0px;
+    color: #000;
+    font-family:"CozetteVector";
+    font-size:var(--ytd-user-comment_-_font-size);
+    background-color:var(--bg-caramel-3);
+    padding: 3px 8px;
+    height: 12px;
+    width:370px;
+}
+
+ytd-thumbnail.ytd-grid-video-renderer ytd-thumbnail-overlay-time-status-renderer { /* channel page effect */
+    outline:1px solid #000;
+    left:-8px;
+    margin-bottom: -0px;
+    color:var(--bg-caramel-1);
+    font-family:"CozetteVector";
+    font-size:var(--ytd-user-comment_-_font-size);
+    background-color:var(--bg-caramel-1);
+    padding: 3px 8px;
+    height: 12px;
+    width:370px;
+}
+
+ytd-playlist-panel-video-renderer ytd-thumbnail-overlay-time-status-renderer,
+ytd-thumbnail-overlay-time-status-renderer { /* right video list effect */
+    outline:1px solid #000;
+    left:-8px;
+    margin-bottom: -0px;
+    color: #000;
+    font-family:"CozetteVector";
+    font-size:var(--ytd-user-comment_-_font-size);
+    background-color:var(--bg-caramel-1);
+    padding: 3px 8px;
+    height: 12px;
+    width:370px;
+}
+
+#items.ytd-watch-next-secondary-results-renderer ytd-thumbnail #thumbnail.ytd-thumbnail yt-img-shadow { /* right video list */
+    opacity:0.7;
+    width:100%; /* fix left side of image */
+}   /* right video list effect end */
+
+#details.ytd-rich-grid-media {
+    background:var(--bg-caramel-2);
+    padding:2px 4px 12px 4px;
+    border-bottom:12px solid var(--bg-caramel-4);
+    background-size:100%;
+    overflow:hidden !important;
+    outline:1px solid #000;
+}
+
+ytd-rich-grid-media #video-title.ytd-rich-grid-media { /* was called "ytd-rich-grid-media[mini-mode]" */
+	margin-left:2px;
+	padding:3px;
+	border:1px solid #000;
+	background:var(--bg-caramel-1);
+	border-radius:8px;
+	font-weight:200;
+    font-size:15px; /* fix fullscreen mode font size */
+}
+
+#dismissible.ytd-rich-grid-media {
+    width:97%;
+}
+
+/* thumbnail */
+
+ytd-thumbnail #thumbnail.ytd-thumbnail yt-img-shadow.ytd-thumbnail { /* avoid size reduction on zoom */
+    transform: translateY(-50%);
+    filter:opacity(70%);
+    left:0px;
+    width: 101%;
+}
+
+ytd-thumbnail #thumbnail.ytd-thumbnail {
+	/* effects on homepage / channel page, bg color was F2CE79 */
+	background-color:transparent;
+	/*effects main video page border */
+	outline:1px solid #000;
+	width:100%;
+}
+
+ytd-thumbnail.ytd-grid-video-renderer {
+    width:98%;
+}
+
+/* channel */
+
+#contents.ytd-item-section-renderer #thumbnail.ytd-thumbnail,
+ytd-playlist-thumbnail #thumbnail.ytd-playlist-thumbnail,
+ytd-grid-renderer #thumbnail.ytd-thumbnail {
+    /*channel page effect  & channel page playlist effect */
+	outline:1px solid #000;
+	width:95%;
+    height:105px;
+    top:3px;
+}
+
+ytd-two-column-search-results-renderer yt-img-shadow.ytd-video-renderer, /* search page vid owner */
+#avatar.ytd-video-owner-renderer, /* main page video owner */
+#author-thumbnail.ytd-comment-renderer yt-img-shadow.ytd-comment-renderer, /* comment renderer in comment section */
+#author-thumbnail.ytd-post-renderer yt-img-shadow.ytd-post-renderer, /*homepage post author */
+ytd-channel-renderer[use-prominent-thumbs] yt-img-shadow.ytd-channel-renderer,
+#avatar.ytd-c4-tabbed-header-renderer/* channel effect */ {
+    border-radius:5px; border:1px solid #000;
+}
+
+#background.tp-yt-app-header,
+ytd-c4-tabbed-header-renderer[has-channel-art] .banner-visible-area.ytd-c4-tabbed-header-renderer { /* channel cover remove */
+    height: calc(100vw / 6.2 - 1px);
+    display:none;
+}
+
+.arrow.yt-horizontal-list-renderer,
+/* search page arrow effect */
+.arrow.ytd-horizontal-card-list-renderer, .ytd-horizontal-card-list-renderer[arrow] {
+    cursor: pointer;
+    width: 24px;
+    margin-top:81px;
+    height: 25px;
+    border-radius: 2px;
+    background-color: var(--yt-spec-brand-background-solid);
+    box-shadow:none;
+    border:1px solid #000;
+}
+
+/* channel - experimental */
+
+/*remove first page stuff */
+/* the meta lines in the timer bar fly away */
+/* so i have to hide anything in the home section of channel*/
+/* until i find a solution */
+ytd-video-renderer[is-backstage-video] ytd-thumbnail.ytd-video-renderer, /* community video thumb */
+#grid-container.ytd-expanded-shelf-contents-renderer > .ytd-expanded-shelf-contents-renderer,
+#primary.ytd-two-column-browse-results-renderer dismissible.ytd-shelf-renderer,
+#primary.ytd-two-column-browse-results-renderer ytd-button-renderer[is-icon-button][has-no-text],
+h2.ytd-shelf-renderer, .grid-subheader.ytd-shelf-renderer,
+#scroll-container.yt-horizontal-list-renderer {
+    display:none;
+}
+
+#details.ytd-grid-video-renderer a.ytd-grid-video-renderer {
+    display: block;
+    background-color:var(--bg-caramel-1);
+    border:1px solid #000;
+    width:140px;
+    padding:4px;
+    margin-left:32px;
+    opacity:0;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+#details.ytd-grid-video-renderer a.ytd-grid-video-renderer:hover {
     opacity:1;
 }
-ytd-button-renderer #button.ytd-button-renderer { /* sign in border */
-    background-color:var(--bg-caramel-1) !important;
-    border:none;
+
+#metadata-line.ytd-grid-video-renderer {
+      text-align:center;
+      font-size:12px;
+      line-height:20px;
 }
 
-/* video position */
-
-ytd-watch-flexy:not([theater]):not([fullscreen]) #primary.ytd-watch-flexy, ytd-watch-flexy:not([theater]):not([fullscreen]) #secondary.ytd-watch-flexy,
-ytd-watch-flexy[flexy][is-two-columns_][is-extra-wide-video_] #primary.ytd-watch-flexy, ytd-watch-flexy[flexy][is-two-columns_][is-four-three-to-sixteen-nine-video_] #primary.ytd-watch-flexy {
-    margin-top:-10px;
+#items.ytd-grid-renderer #metadata-line.ytd-grid-video-renderer {
+    margin-left:13px;
+    margin-top:16px;
+    width:203px;
 }
 
-.ytp-swatch-background-color {
-    height:7px;
-    background-color:var(--yt-live-chat-vem-background-color);
-}
-
-.ytp-time-display, .ytp-exp-bigger-button-like-mobile.ytp-small-mode .ytp-time-display {
-    font-size: 109%;
+#meta.ytd-grid-video-renderer {
+    padding-right: 24px;
+    margin-left:-5px;
     position:absolute;
-    background-color:#eee8dd;
-    padding: 0 5px;
-    line-height: 29px;
-    margin-top:-45px;
-    border:1px solid #000;
-    border-radius:1px;
+    top:-110px;
 }
 
-.ytp-time-current, .ytp-time-separator, .ytp-time-duration {
-    color: #000;
-    text-shadow:none;
-    background-color:#eee8dd;
+.ytd-grid-video-renderer[meta-block].grid.ytd-grid-video-renderer #metadata.ytd-grid-video-renderer {
+    display:inline;
+    position:absolute; /* make metadata stay in timer bar */
+    top:66px;
+}
+
+tp-yt-paper-tabs.ytd-c4-tabbed-header-renderer {
+    --paper-tabs-selection-bar_-_border-bottom-width: 0px;
+}
+
+tp-yt-paper-tab.ytd-c4-tabbed-header-renderer:hover {
+       color:#a3a599;
+}
+
+tp-yt-paper-tab.iron-selected.ytd-c4-tabbed-header-renderer  {
+       display:none;
+}
+
+.ytd-c4-tabbed-header-renderer tp-yt-iron-icon.tp-yt-paper-icon-button  {
+    display:none;
+}
+
+#links-holder.ytd-c4-tabbed-header-renderer {
+    opacity:0;
+    position:absolute;
+    top:10px;
+}
+
+#links-holder.ytd-c4-tabbed-header-renderer:hover {
+    opacity:1;
+}
+
+#channel-header-container.ytd-c4-tabbed-header-renderer #button.ytd-button-renderer { /* sub button */
+    display:none;
+    border:1px solid #000;
+}
+
+#tabsContent.tp-yt-paper-tabs {
+    padding-top:2px;
+    height:21px;
+    margin-left:-18px;
+}
+
+#channel-header-container.ytd-c4-tabbed-header-renderer {
+    padding:0px 60px 3px 12px;
+    border-radius:5px;
+    display:block !important;
+}
+
+ytd-channel-sub-menu-renderer {
+    margin-top:-21px;
+    margin-left:10px;
+    width:800px; 
+}
+
+ytd-channel-sub-menu-renderer #label-text.yt-dropdown-menu {
+    font-size:2px;
+}
+
+#tabsContent.tp-yt-paper-tabs > :not(#selectionBar) {
+    width:35px;
+}
+
+#tabsContent.scrollable.tp-yt-paper-tabs {
+    width:806px;
+}
+
+iron-input.tp-yt-paper-input > input.tp-yt-paper-input {
+    padding-bottom:2px;
+    width:200px;
+    font-family:var(--font-insert);
+}
+
+ytd-expandable-tab-renderer yt-icon,
+ytd-expandable-tab-renderer[show-input] yt-icon-button.ytd-expandable-tab-renderer,
+yt-icon-button.ytd-expandable-tab-renderer {
+    display:block !important;
+    margin-left:-20px;
+}
+
+ytd-playlist-thumbnail.ytd-grid-playlist-renderer {
+    background-color:#7c7466;
+}
+
+ytd-playlist-thumbnail.ytd-grid-playlist-renderer ytd-thumbnail-overlay-now-playing-renderer,
+ytd-playlist-thumbnail.ytd-grid-playlist-renderer ytd-thumbnail-overlay-hover-text-renderer {
+    opacity: 1;
+    background:#877979;
+    font-size:0px;
+    background-size:100%;
+}
+
+/* search im channel */
+.focused-line.tp-yt-paper-input-container {
+ border:none !important;
+outline:none !important;
+
+}
+
+/* search page:before */
+.sbsb_a {
+    background-color:var(--bg-caramel-1); 
+    background-size:100%;
+    border-left:0px solid var(--yt-spec-text-primary);
+    margin-top:450px;
+    outline:1px solid var(--yt-spec-text-primary);
+    position:absolute;
+}
+
+.sbqs_c {
+    color:var(--yt-spec-text-primary);
+    font-family:var(--font-insert);
+    line-height: 14px;
+}
+
+.sbfl_b {
+    display:none;
+}
+
+.sbdd_b {
+    border: none;
+    box-shadow:none;
+}
+
+/* search page */
+
+#content-section.ytd-channel-renderer {
+    display:none;
+}
+
+ytd-search {
+    padding: 36px 1px;
+    margin-top:-35px;
+}
+
+#dismissible.ytd-video-renderer {
+    /* film tape thing */
+    height:90px;
+}
+
+ytd-playlist-renderer.ytd-item-section-renderer {
+    height:83px;
+}
+
+ytd-video-renderer[use-prominent-thumbs] ytd-thumbnail.ytd-video-renderer, ytd-playlist-renderer[use-prominent-thumbs] ytd-playlist-thumbnail.ytd-playlist-renderer, ytd-radio-renderer[use-prominent-thumbs] ytd-thumbnail.ytd-radio-renderer {
+    max-width: 200px;
+    min-width: 60px;
+	height:110px;
+    outline:0px solid #000;
+}
+
+ytd-thumbnail.ytd-movie-renderer #thumbnail.ytd-thumbnail{
+    /* search page movie thumbnail effect */
+    height:200px !important;
+    margin-right: -80px;
+}
+
+.thumbnail-container.ytd-movie-renderer {
+    /* search page movie thumbnail position effect */
+    margin-left:-184px;
+}
+
+a.ytd-search-refinement-card-renderer {
+    border: 1px solid #000;
+    border-radius: 12px;
+}
+
+#card-title.ytd-search-refinement-card-renderer {
+    background-color:var(--bg-caramel-2);
+    outline:1px solid #000;
+    color: var(--yt-spec-text-primary);
+    padding: 12px 16px 16px;
+    height: 24px;
+    margin-top:-1px; /* fix, some hole was showing up */
+}
+
+#card-title.ytd-search-refinement-card-renderer div.ytd-search-refinement-card-renderer {
+    background-color:var(--bg-caramel-1);
+    font-size:14px !important;
+    padding:5px;
+    outline:1px solid #000;
+}
+
+#details.ytd-macro-markers-list-item-renderer {
+    margin-left:4px;
+}
+
+ytd-vertical-list-renderer {
+    padding-bottom:0px;
+}
+
+ytd-shelf-renderer.ytd-item-section-renderer {
+    margin-top:-8px;
+}
+
+#header.ytd-horizontal-card-list-renderer,
+#more.ytd-vertical-list-renderer, #all.ytd-vertical-list-renderer {
+    display:none;
+}
+
+ytd-horizontal-card-list-renderer.ytd-item-section-renderer:not(:first-child) {
+    margin-bottom:-25px;
+}
+
+/* trash */
+#country-code.ytd-topbar-logo-renderer,
+yt-icon,
+yt-icon-button,
+#tooltip.tp-yt-paper-tooltip, /* disable hover global thing */
+ytd-movie-renderer #button.ytd-button-renderer, /* buy or rent movie button in search page */
+/* homepage */
+ytd-rich-section-renderer, /* remove all group sections in home */
+#rich-shelf-header.ytd-rich-shelf-renderer,
+/* right list video page */
+ytd-compact-playlist-renderer,
+ytd-compact-radio-renderer,
+ytd-compact-radio-renderer:not([watch-feed-big-thumbs]) ytd-thumbnail.ytd-compact-radio-renderer, ytd-compact-playlist-renderer:not([watch-feed-big-thumbs]) ytd-playlist-thumbnail.ytd-compact-playlist-renderer,
+.spinner-layer.tp-yt-paper-spinner::after, .circle-clipper.tp-yt-paper-spinner .circle.tp-yt-paper-spinner, /* removes loading circle */ .badge-style-type-live-now.ytd-badge-supported-renderer, .badge-style-type-starting-soon.ytd-badge-supported-renderer, /*live*/
+.badge-style-type-simple.ytd-badge-supported-renderer, /* new tag 
+*/
+/* movie renderer in right list */ ytd-compact-movie-renderer,
+#wide-clickable-area.ytd-movie-offer-module-renderer yt-img-shadow.ytd-movie-offer-module-renderer,
+/* video/description page */
+#sentiment.ytd-video-primary-info-renderer, /* line under like /dislike buts */
+#subscribe-button.ytd-video-secondary-info-renderer,/* vid page */
+#purchase-button.ytd-channel-renderer, #subscribe-button.ytd-channel-renderer, /* channel page */
+ytd-button-renderer.style-suggestive[is-paper-button],/*join*/
+ytd-clarification-renderer[background-style="info"], /*covid*/
+a.ytd-rich-metadata-renderer, /*youtube kids */
+/* player */
+.ytp-large-play-button,
+.ytp-autonav-toggle-button, /* hide autoplay button */
+.iv-branding .branding-img-container img, /* author fly avatar */
+/* home thread */
+#avatar.ytd-rich-grid-media,
+#chips-wrapper.ytd-feed-filter-chip-bar-renderer,
+yt-chip-cloud-chip-renderer.ytd-feed-filter-chip-bar-renderer,
+/*thumbnail thread */
+ytd-moving-thumbnail-renderer, /* disable video preview*/
+ytd-thumbnail-overlay-toggle-button-renderer,
+#avatar.ytd-rich-grid-media,
+author-thumbnail.ytd-comment-simplebox-renderer,
+#author-thumbnail.ytd-comment-simplebox-renderer,
+#author-photo.yt-live-chat-text-message-renderer,
+/* guide */
+ytd-mini-guide-renderer.ytd-app,
+#guide-wrapper.ytd-app,
+#contentContainer.tp-yt-app-drawer {   
+    display:none;
 }
 
 .title.ytd-video-primary-info-renderer {
     padding:1px;
     font-weight:bold;
-    font-size:22px;
+    font-size:20px;
     font-family:"Arial";
     margin-bottom:5px;
     margin-left:3px;
@@ -181,62 +559,8 @@ span.ytd-video-view-count-renderer {
     margin-top:-5px;
 }
 
-/* video info */
-
-.title.ytd-video-primary-info-renderer {
-    font-weight:bold;
-    font-size:20px;
-    font-family:"Arial";
-}
-
 ytd-expander.ytd-video-secondary-info-renderer { /* this changes the description layout from center to left position */
     margin-left: 0px;
-}
-
-/* comment section */
-
-#vote-count-middle.ytd-comment-action-buttons-renderer {
-    border:3px solid var(--bg-caramel-3);
-    margin-left: 5px;
-}
-
-#like-button.ytd-comment-action-buttons-renderer yt-icon, #like-button.ytd-comment-action-buttons-renderer yt-icon-button {
-    --yt-button-icon-size:19px;
-    color:#000000 !important;
-    letter-spacing: 0.007px;
-    display: block !important;
-    position:absolute;
-    left:0px;
-    top:25px;
-    opacity:0.2;
-}
-
-#dislike-button.ytd-comment-action-buttons-renderer yt-icon, #dislike-button.ytd-comment-action-buttons-renderer yt-icon-button {
-    --yt-button-icon-size:19px;
-    color:#000000 !important;
-    letter-spacing: 0.007px;
-    display: block !important;
-    position:absolute;
-    left:10px;
-    top:25px;
-    opacity:0.2;
-}
-
-#creator-heart-button.ytd-creator-heart-renderer {
-	display:table-cell;
-	background-size:63%;
-	background-image: url("https://c.tenor.com/Yf0qNygeLhMAAAAj/hearts-spin.gif");
-	border-radius:1px;
-    position: relative;
-	bottom:0px;
-    width: 13px;
-    height:13px;
-}
-
-#avatar.ytd-video-owner-renderer,
-#author-thumbnail.ytd-comment-renderer yt-img-shadow.ytd-comment-renderer{
-    border-radius: 5%;
-	border:1px solid #000;
 }
 
 ytd-author-comment-badge-renderer {
@@ -245,220 +569,16 @@ ytd-author-comment-badge-renderer {
     --ytd-author-comment-badge-name-color:var(--yt-spec-text-primary) !important;
 }
 
-/* channel page */
-
-.arrow.yt-horizontal-list-renderer,
-/* search page arrow effect */
-.arrow.ytd-horizontal-card-list-renderer, .ytd-horizontal-card-list-renderer[arrow] {
-    cursor: pointer;
-    width: 24px;
-    height: 40px;
-    border-radius: 2px;
-    background-color: var(--yt-spec-brand-background-solid);
-    box-shadow:none;
+#like-button.ytd-comment-action-buttons-renderer yt-icon, #dislike-button.ytd-comment-action-buttons-renderer yt-icon,
+#like-button.ytd-comment-action-buttons-renderer #button.ytd-toggle-button-renderer, #dislike-button.ytd-comment-action-buttons-renderer #button.ytd-toggle-button-renderer {
+    display:block !important;
 }
 
-#background.tp-yt-app-header {
-	display:block;
-    left: 62px;
-    overflow: hidden;
-    border-radius:2px;
-}
-
-/* caramel compact group */
-/* ytd-moving-thumbnail-renderer,  disable video preview*/  
-ytd-movie-renderer #button.ytd-button-renderer, /* buy or rent movie button in search page */
-#country-code.ytd-topbar-logo-renderer,
-yt-icon,
-yt-icon-button,
-.ytp-large-play-button,
-#avatar.ytd-rich-grid-media,
-#avatar.ytd-video-owner-renderer,
-/* #author-thumbnail.ytd-comment-simplebox-renderer,
-#author-thumbnail.ytd-comment-renderer yt-img-shadow.ytd-comment-renderer, */
-ytd-compact-radio-renderer:not([watch-feed-big-thumbs]) ytd-thumbnail.ytd-compact-radio-renderer,
-ytd-compact-playlist-renderer:not([watch-feed-big-thumbs]) ytd-playlist-thumbnail.ytd-compact-playlist-renderer,
-/* garbage thread */
-ytd-mealbar-promo-renderer[dialog][dialog][dialog], /* random offer popup in video page */
-ytd-rich-section-renderer,
-ytd-primetime-promo-header-renderer,
-#content-wrapper.ytd-statement-banner-renderer,
-#panels.ytd-primetime-promo-renderer,
-/* thumbnail ground */
-ytd-thumbnail-overlay-toggle-button-renderer,
-/* guide */
-ytd-mini-guide-renderer.ytd-app,
-#guide-wrapper.ytd-app,
-#contentContainer.tp-yt-app-drawer,
-/* other */
-.spinner-layer.tp-yt-paper-spinner::after, .circle-clipper.tp-yt-paper-spinner .circle.tp-yt-paper-spinner, /* removes loading circle */
-.badge-style-type-simple.ytd-badge-supported-renderer, /* new tag */
-#subscribe-button.ytd-video-secondary-info-renderer,
-a.ytd-rich-metadata-renderer,
-#sentiment.ytd-video-primary-info-renderer,
-#author-thumbnail.ytd-comment-simplebox-renderer,
-ytd-button-renderer.style-suggestive[is-paper-button] {
-    --yt-formatted-string-deemphasize-color: var(--yt-spec-call-to-action); 
-    display:none;
-}
-
-/* home page */
-
-#chips-wrapper.ytd-feed-filter-chip-bar-renderer {
-    position: fixed;
-    top: 35px;
-    width: 90%;
-    z-index: 2000;
-    background-color: var(--yt-spec-general-background-a);
-    border-top: 0px solid var(--yt-spec-10-percent-layer);
-    border-bottom: 0px solid var(--yt-spec-10-percent-layer);
-}
-
-#chips.ytd-feed-filter-chip-bar-renderer {
-    left:-20px;
-    position:relative;
-    width:1000px; /* this is probably default */
-}
-
-yt-chip-cloud-chip-renderer.ytd-feed-filter-chip-bar-renderer {
-    border-radius:5px;
-    border:1px solid #000;
-    background-color:#ebebeb;
-}
-
-.yt-related-chip-cloud-renderer {
-    background:var(--yt-spec-general-background);
-}
-
-#left-arrow.ytd-feed-filter-chip-bar-renderer, #right-arrow.ytd-feed-filter-chip-bar-renderer {
-     opacity:0;
-}
-
-#contents.ytd-rich-grid-renderer {
-    margin-top: 0px; /* this is being watched, bc its weird */
-    margin-left:-40px;
-    justify-content: center;
-    --ytd-rich-grid-items-per-row: 4;
-}
-
-#details.ytd-rich-grid-media {
-    background:var(--yt-spec-general-background-ab);
-    padding:4px 4px 14px 4px;
-    background-size:100%;
-    bottom:0px; /* it was -1, but set to 0 bc it causes the border to be bold */
-    overflow:hidden !important;
-    outline:1px solid #000;
-    overflow-x:scroll;
-    border-bottom:14px solid var(--yt-spec-general-background-a);
-}
-
-ytd-rich-grid-media #video-title.ytd-rich-grid-media { /* was called "ytd-rich-grid-media[mini-mode]" */
-	margin-left:2px;
-	padding:4px;
-	border:1px solid #000;
-	background:var(--bg-caramel-4);
-	border-radius:8px;
-	font-weight:200;
-    font-size:30px;
-}
-
-/* picture thumbnail */
-
-/* found in search page */
-yt-img-shadow.ytd-video-renderer,
-#avatar.ytd-c4-tabbed-header-renderer,/* channel page author avatar */
-/* video page avatar */
-#avatar.ytd-video-owner-renderer,
-#author-thumbnail.ytd-comment-renderer yt-img-shadow.ytd-comment-renderer {
-    border-radius: 5%;
-	border:1px solid #000;	
-}
-
-/* video thumbnail */
-
-ytd-thumbnail.ytd-movie-renderer #thumbnail.ytd-thumbnail{
-    /* search page movie thumbnail effect */
-    height:200px !important;
-    margin-right: -80px;
-}
-
-.thumbnail-container.ytd-movie-renderer {
-    /* search page movie thumbnail position effect */
-    margin-left:-184px;
-}
-
-ytd-video-renderer[use-prominent-thumbs] ytd-thumbnail.ytd-video-renderer, ytd-playlist-renderer[use-prominent-thumbs] ytd-playlist-thumbnail.ytd-playlist-renderer, ytd-radio-renderer[use-prominent-thumbs] ytd-thumbnail.ytd-radio-renderer {
-    /* search page effect */
-    margin-right: 16px;
-    max-width: 0px;
-    min-width: 210px;
-}
-
-ytd-player, #container.ytd-player ytd-channel-video-player-renderer {
-    /* channel page video introduction effect & video page player effect */
-    outline:1px solid #000000;
-    margin-left:2px;
-}
-
-#contents.ytd-item-section-renderer #thumbnail.ytd-thumbnail,
-ytd-playlist-thumbnail #thumbnail.ytd-playlist-thumbnail,
-ytd-grid-renderer #thumbnail.ytd-thumbnail {
-    /*channel page effect  & channel page playlist effect */
-	background-color:transparent;
-	outline:1px solid #000;
-	width:95%;
-    height:105px;
-    top:1px;
-}
-
-ytd-thumbnail.ytd-rich-grid-media #thumbnail.ytd-thumbnail {
-	/* homepage effect & uploaders playlist effect */
-	background-color:transparent;
-	outline:1px solid #000;
-}
-
-.ytd-rich-grid-media #thumbnail.fade-in.ytd-moving-thumbnail-renderer {
-    /* homepage video thumbnail timer bar:hover */
-    top:-19px;
-    border-bottom:20px solid var(--yt-spec-general-background-a);
-}
-
-ytd-thumbnail-overlay-time-status-renderer  {
-    /* video thumbnail timer bar */
-    outline:1px solid #000;
-    left:-8px;
-    margin-bottom: -0px;
-    color:var(--yt-spec-primary-text);
-    font-family:"Arial";
-    font-size:12px;
-    background-color:var(--yt-spec-general-background-a);
-    padding: 3px 8px;
-    height: 12px;
-    width:370px;
-}
-
-ytd-compact-video-renderer:not([watch-feed-big-thumbs]) ytd-thumbnail.ytd-compact-video-renderer, /* support border */
-ytd-thumbnail #thumbnail.ytd-thumbnail yt-img-shadow.ytd-thumbnail {
-	outline:2px solid #000000; /* for borders of other videos in the homepage having visibility issues */
-}
-
-ytd-thumbnail #thumbnail.ytd-thumbnail yt-img-shadow.ytd-thumbnail {
-	filter:opacity(70%);
-}
-
-#title.yt-simple-endpoint.ytd-compact-radio-renderer,
-#title.ytd-compact-playlist-renderer {
-    margin-top:13px;
-    padding:5px;
-    background:#ebebeb;
-    border:1px solid #000;
-    border-radius:0px;
-    border-radius:4px;
-    width:100px;
-}
-
-#dismissible.ytd-compact-video-renderer, #dismissed.ytd-compact-video-renderer { /* extends video title */
-    width: 108%;
+yt-icon-button ytd-comment-action-buttons-renderer,
+yt-icon-button .ytd-creator-heart-renderer,
+#creator-heart-button.ytd-creator-heart-renderer {
+    display:block !important;
+    color:#000 !important;
 }
 
 /* video page right side */
@@ -467,21 +587,17 @@ ytd-thumbnail #thumbnail.ytd-thumbnail yt-img-shadow.ytd-thumbnail {
     margin-top:-9px;
 }
 
-#meta.ytd-grid-video-renderer {
-    padding-right: 24px;
-    margin-left:5px;
-    margin-top:-12px;
-}
-.metadata.ytd-compact-video-renderer {
-    min-width: 0;
-    width: 104%; 
+#dismissible.ytd-compact-radio-renderer, #dismissed.ytd-compact-radio-renderer,
+#dismissible.ytd-compact-video-renderer {
+    width:auto;
+    height:88px; /* fix */
 }
 
-ytd-compact-video-renderer:not([watch-feed-big-thumbs]) ytd-thumbnail.ytd-compact-video-renderer {
+ytd-compact-video-renderer:not([watch-feed-big-thumbs]) ytd-thumbnail.ytd-compact-video-renderer { /* alternative video right list adjust */ /* this is being watched */
     margin-top:-7px;
 }
 
-ytd-compact-video-renderer {
+ytd-compact-video-renderer { /* meta adjust */
     top:9px;
 }
 
@@ -489,7 +605,7 @@ ytd-compact-video-renderer {
 
 ytd-multi-page-menu-renderer[menu-style="multi-page-menu-style-type-system"],
 ytd-multi-page-menu-renderer {
-    background: var(--yt-spec-general-background-ab);
+    background: var(--bg-caramel-2);
     border: 1px solid #000;
 }
 
@@ -505,7 +621,7 @@ tp-yt-paper-item.ytd-compact-link-renderer:hover {
 }
 
 ytd-simple-menu-header-renderer {
-    background-color: var(--yt-spec-general-background-ab);
+    background-color: var(--bg-caramel-2);
     border-bottom: 1px solid var(--yt-spec-10-percent-layer);
 }
 
@@ -519,7 +635,7 @@ ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-me
 }
 
 #label.ytd-compact-link-renderer {
-       font-family:"CozetteVector";
+    font-family:"CozetteVector";
 }
 
 #items.yt-multi-page-menu-section-renderer > .yt-multi-page-menu-section-renderer:not([compact-link-style="compact-link-style-type-disclaimer"]).yt-multi-page-menu-section-renderer {
@@ -532,9 +648,18 @@ ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-me
     background-color: #d0ebff;
 }
 
+#submenu.ytd-multi-page-menu-renderer {
+    margin-right: 0;
+    height:450px; /* reduce choose section height */
+}
+
+ytd-compact-link-renderer[compact-link-style="compact-link-style-type-selection-menu"] #content-icon.ytd-compact-link-renderer[hidden] + #primary-text-container.ytd-compact-link-renderer > #label.ytd-compact-link-renderer {
+    margin-left: 0px;
+}
+
 tp-yt-paper-toast {
     border:1px solid #000;
-    border-left:12px solid #000;
+    border-left:12px solid var(--ff-toolbar-bg);
     background-color: var(--paper-toast-background-color, #eee8dd);
     min-height: 48px;
     min-width: 228px;
@@ -554,54 +679,39 @@ tp-yt-paper-toast {
     -webkit-font-smoothing: none;
 }
 
-#text.yt-notification-action-renderer {
-    padding:5px;
-    color: var(--yt-spec-static-overlay-text-primary);
+/* player */
+
+ytd-player, #container.ytd-player ytd-channel-video-player-renderer {
+    /* channel page video introduction effect & video page player effect */
+    border:1px solid #000000;
 }
 
-/* pop up above description section */
-
-.buttons.ytd-modal-with-title-and-button-renderer {
-    border-top: 1px solid #000;
-    background:var(--yt-spec-general-background-ab);
+.ytp-swatch-background-color {
+    height:7px;
+    background-color:var(--yt-spec-text-primary);
 }
 
-ytd-modal-with-title-and-button-renderer[modal].ytd-popup-container, 
-.buttons.ytd-modal-with-title-and-button-renderer #button.ytd-button-renderer {
-    outline: 1px solid #000 !important;
-    background:var(--yt-spec-general-background-a);
+.ytp-time-display, .ytp-exp-bigger-button-like-mobile.ytp-small-mode .ytp-time-display {
+    font-size: 109%;
+    position:absolute;
+    background-color:var(--yt-spec-general-background-a);
+    padding: 0 5px;
+    line-height: 29px;
+    margin-top:-45px;
+    border:1px solid #000;
+    border-radius:1px;
 }
 
-/* movie section */
-
-ytd-movie-offer-module-renderer,
-ytd-movie-offer-module-renderer img.yt-img-shadow,
-ytd-movie-offer-module-renderer ytd-button-renderer {
-    border: 1px solid #000;
-}
-
-#header.ytd-movie-offer-module-renderer {
-   background-color:var(--yt-spec-general-background-ab);
-   border-bottom: 1px solid #000;
-}
-
-ytd-movie-offer-module-renderer #button.ytd-button-renderer {
-    background: var(--yt-spec-general-background-a) !important;
-}
-
-ytd-movie-offer-module-renderer img.yt-img-shadow {
-    height:150px;
-    width:120px;
-}
-
-#info.ytd-movie-offer-module-renderer {
-    padding:5px;
-    height:140px;
+.ytp-time-current, .ytp-time-separator, .ytp-time-duration {
+    color: var(--yt-spec-text-primary);
+    text-shadow:none;
+    background-color:var(--yt-spec-general-background-a);
 }
 
 /* uploader playlist */
+
 #container.ytd-playlist-panel-renderer {
-    border: 1px solid #000;
+    outline: 1px solid #000;
 }
 
 #container.ytd-playlist-panel-renderer yt-icon, .yt-icon-container.yt-icon {
@@ -612,27 +722,17 @@ ytd-movie-offer-module-renderer img.yt-img-shadow {
 #container.ytd-playlist-panel-renderer #button.ytd-toggle-button-renderer {
     display:block !important;
     background-color: var(--yt-spec-general-background-a) !important;
-    outline:1px solid #000;
-}
-
-.badge-style-type-medium-grey.ytd-badge-supported-renderer {
-    height:40px;
-    width:50px;
-    color: rgba(0, 0, 0, 0);
-    position:absolute;
-    margin-left:245px;
-    margin-top:-23px;
     border:1px solid #000;
-    border-radius:5px;
+    border-radius:3px;
 }
 
 #container.ytd-playlist-panel-renderer ytd-menu-renderer {
-    padding-bottom: 6px;
+    padding-bottom: 8px;
     margin-top:10px
 }
 
 .header.ytd-playlist-panel-renderer {
-    background-color: var(--yt-spec-general-background-ab);
+    background-color: var(--bg-caramel-2);
     padding: 16px 16px 0 24px;
     border-bottom:1px solid #000;
 }
@@ -647,32 +747,8 @@ ytd-movie-offer-module-renderer img.yt-img-shadow {
 
 /* live section */
 
-.badge-style-type-live-now.ytd-badge-supported-renderer, .badge-style-type-starting-soon.ytd-badge-supported-renderer {
-    background: transparent;
-    color: var(--yt-spec-brand-link-text);
-    border: 1px solid #000;
-}
-
-.badge-style-type-live-now.ytd-badge-supported-renderer, .badge-style-type-starting-soon.ytd-badge-supported-renderer {
-    color: #000;
-}
-
-ytd-thumbnail-overlay-time-status-renderer[overlay-style="LIVE"] {
-    background-color:#e5aaa5 ;
-}
-
-#author-photo.yt-live-chat-text-message-renderer {
-    outline:1px solid #000;
-    margin-right: 16px;
-    border-radius: 5%;
-}
-
-html:not(.style-scope)[watch-color-update] {
-    --yt-live-chat-background-color: #212121;
-    --yt-live-chat-header-background-color: var(--bg-caramel-1);
-    --yt-live-chat-action-panel-background-color: var(--bg-caramel-1);
-    --yt-live-chat-message-highlight-background-color: var(--bg-caramel-1);
-    --yt-live-chat-ninja-message-background-color: var(--bg-caramel-1);
+yt-live-chat-item-list-renderer[allow-scroll] #item-scroller.yt-live-chat-item-list-renderer {
+  scrollbar-color: rgba(25, 25, 25, 0) rgba(255, 255, 255, 0);
 }
 
 yt-live-chat-header-renderer #label-text.yt-dropdown-menu {
@@ -681,34 +757,34 @@ yt-live-chat-header-renderer #label-text.yt-dropdown-menu {
     font-family:var(--font-insert);
     color:#212121;
     border:1px solid #000; /*outline border was not a bit clear so replaced it with border instead */
-    background-color:var(--yt-spec-general-background-a);
+    background-color:var(--bg-caramel-1);
+}
+
+yt-live-chat-header-renderer {
+    background-color: var(--bg-caramel-2);
+    border-bottom:1px solid #000;
+    padding-top:26px;
+    padding-bottom:29px;
+}
+
+html:not(.style-scope)[watch-color-update] {
+    --yt-live-chat-background-color:var(--yt-live-chat-message-highlight-background-color);
 }
 
 iframe.ytd-live-chat-frame {
     outline:1px solid #000;
 }
 
-yt-live-chat-header-renderer {
-    background-color: var(--yt-spec-general-background-ab);
-    border-bottom:1px solid #000;
-    padding-top:26px;
-    padding-bottom:29px;
+#message.yt-live-chat-text-message-renderer,
+#author-name.yt-live-chat-author-chip,
+yt-button-renderer #button.yt-button-renderer,
+#text.yt-live-chat-message-renderer, #subtext.yt-live-chat-message-renderer {
+    font-family:var(--font-insert);
+    font-size:16px;
 }
 
-#items.yt-live-chat-ticker-renderer {
-    padding: 6px 24px 10px;
-    outline:1px solid #000;
-}
-
-#container.yt-live-chat-ticker-paid-message-item-renderer {
-    background:#e2dbcc !important;
-    border-radius: 5px;
-    border:1px solid #000;
-    padding: 4px;
-}
-
-ytd-live-chat-frame #button.ytd-toggle-button-renderer {
-    margin-right:0px;  /* avoid global padding change */
+yt-live-chat-message-input-renderer { /* disable live chat input*/
+    display:none;
 }
 
 ytd-live-chat-frame #button.ytd-toggle-button-renderer {
@@ -719,111 +795,19 @@ ytd-live-chat-frame #button.ytd-toggle-button-renderer {
     outline:1px solid #000;
 }
 
-ytd-live-chat-frame ytd-toggle-button-renderer[is-paper-button][align-by-text]:not(:empty) {
-    margin-left: -16px;
+/* like, dislike & save interaction */
+ytd-modal-with-title-and-button-renderer[modal].ytd-popup-container, 
+.buttons.ytd-modal-with-title-and-button-renderer #button.ytd-button-renderer,
+.buttons.ytd-modal-with-title-and-button-renderer {
     display:none;
-}
-
-yt-live-chat-item-list-renderer[allow-scroll] #item-scroller.yt-live-chat-item-list-renderer {
-    overflow-y:scroll;
-    padding-right: 0;
-  scrollbar-width:thin;
-  scrollbar-color: rgba(25, 25, 25, 0) rgba(255, 255, 255, 0);
-}
-
-yt-live-chat-text-message-renderer {
-	font-family:var(--font-insert);
-    font-size: 17px;
-    --yt-endpoint-color: var(--yt-live-chat-primary-text-color, var(--yt-deprecated-luna-black));
-    --yt-endpoint-hover-color: var(--yt-live-chat-primary-text-color, var(--yt-endpoint-color));
-}
-
-#card.yt-live-chat-viewer-engagement-message-renderer {
-    /* welcome to live chat message stuff */
-    background-color: var(--yt-live-chat-vem-background-color);
-    border-radius: 4px;
-    border:1px solid #000;
-    padding:13px;
-}
-.badge-style-type-live-now.ytd-badge-supported-renderer, .badge-style-type-starting-soon.ytd-badge-supported-renderer {
-    /* live tag */
-    background: transparent;
-    color: var(--yt-spec-brand-link-text);
-    border: 1px solid var(--yt-spec-brand-link-text);
-    position:absolute;
-    margin-top:-25px;
-    margin-left:85px;
-}
-
-/* search page:before */
-.sbsb_a {
-    position:absolute;
-    margin-top:450px;
-    background-color:var(--bg-caramel-1); 
-    background-size:100%;
-    outline:1px solid #000;
-    border-left:12px solid #000;
-}
-
-.sbqs_c {
-    line-height: 14px;
-    font-family:var(--font-insert);
-}
-
-.sbfl_b {
-    display:none;
-}
-
-.sbdd_b {
-    border: none;
-    box-shadow:none;
-    cursor: default;
-}
-
-/* search page */
-
-#content-section.ytd-channel-renderer {
-    display:none;
-}
-
-a.ytd-search-refinement-card-renderer {
-    border: 1px solid #000;
-    border-radius: 12px;
-}
-
-#card-title.ytd-search-refinement-card-renderer {
-    background-color:var(--yt-spec-general-background-ab);
-    outline:1px solid #000;
-    color: var(--yt-spec-text-primary);
-    padding: 12px 16px 16px;
-    height: 24px;
-    margin-top:-1px; /* fix, some hole was showing up */
-}
-
-#card-title.ytd-search-refinement-card-renderer div.ytd-search-refinement-card-renderer {
-    background-color:var(--bg-caramel-1);
-    font-size:14px !important;
-    padding:5px;
-    outline:1px solid #000;
-}
-
-ytd-video-renderer[use-prominent-thumbs] ytd-thumbnail.ytd-video-renderer {
-    max-width: 200px;
-    min-width: 60px;
-	height:90px;
-}
-
-ytd-search {
-    padding: 36px 1px;
-    margin-top:-35px;
 }
 
 /* share or embed view */
 
 .yt-copy-link-renderer {
     border-left: 1px solid #000;
-    background-color: var(--yt-spec-general-background-a);
-    font-size:13px;
+    font-size:15px;
+    font-family:"CozetteVector";
 }
 
 #bar.yt-copy-link-renderer {
@@ -831,46 +815,106 @@ ytd-search {
      background-color:#f8f8f8;
 }
 
+#share-url.yt-copy-link-renderer {
+    font-size: 15px;
+    font-weight:bold;
+    outline:0px;
+    color:var(--ff-toolbar-bg);
+}
+
 #title.yt-share-target-renderer {
-    padding:2px;
+    padding:1px;
     outline:1px solid #000;
-    background-color:var(--yt-spec-general-background-ab);
+    background-color:var(--bg-caramel-1);
     color: var(--yt-spec-text-primary);
     margin-left: 2px;
     width: 63px;
-    text-align: center;
 }
 
-tp-yt-paper-dialog {
-    margin: 24px 40px;
-    background: #eee8dd;
-    border:5px solid var(--ff-toolbar-bg);
+ytd-popup-container tp-yt-paper-dialog {
+    background:var(--bg-caramel-2);
+    margin: 34px 40px;
+    border:7px solid var(--ff-toolbar-bg);
+    border-top:24px solid var(--ff-toolbar-bg);
     border-radius:2px;
 }
 
-#title.yt-share-panel-title-v15-renderer {
-    margin-left:0px;
-    color:transparent;
+ytd-unified-share-panel-renderer {
+    max-width: 470px;
+    padding: 12px 12px 12px 12px;
+    outline:0px; /* prevent borders appearing when clicking */
+}
+
+yt-share-panel-header-renderer {
     background-image:url("https://raw.githubusercontent.com/lierante/caramel/main/preview.gif");
+    height:268px;
     background-size:100%;
-    height:260px;
-    width:465px;
+    cursor:zoom-in;
     border:1px solid #000;
 }
 
-yt-copy-link-renderer.yt-third-party-network-section-renderer {
-    margin-top:15px !important;
+#title.yt-share-panel-title-v15-renderer {
+    visibility: hidden;
+}
+
+#title.yt-share-panel-title-v15-renderer:after {
+    visibility: visible;
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    width:468px;
+    padding-left:5px;
+    font-family:"CozetteVector";
+    content: "author: github.com/lierante/caramel";
 }
 
 yt-start-at-renderer.yt-third-party-network-section-renderer {
     margin-top:-30px !important;
     padding-top: 50px;
-    padding-bottom: 10px ;
     border-top: 0px solid var(--yt-spec-10-percent-layer);
 }
 
-#start-at-wrapper.yt-start-at-renderer {
- outline:1px solid #000;
-    background-color:#f8f8f8;
-    padding:6px;
+tp-yt-paper-listbox.yt-dropdown-menu tp-yt-paper-item.yt-dropdown-menu {
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+    background-color:var(--bg-caramel-2);
 }
+tp-yt-paper-listbox.yt-dropdown-menu {
+    border:1px solid #000;
+}
+
+/* font fix */
+body,
+/*channel */
+#metadata-line.ytd-grid-video-renderer span.ytd-grid-video-renderer,
+tp-yt-paper-tab,
+#subscriber-count.ytd-c4-tabbed-header-renderer,
+#text.ytd-channel-name,
+/* channel community */
+.vote-percentage.ytd-backstage-poll-renderer, .choice-text.ytd-backstage-poll-renderer,
+/* right list */
+#video-title.ytd-compact-movie-renderer,
+ytd-compact-radio-renderer.use-ellipsis #video-title.ytd-compact-radio-renderer,
+#video-title.ytd-compact-radio-renderer,
+#video-title.ytd-compact-playlist-renderer, 
+#video-title.ytd-compact-video-renderer,
+#metadata-line.ytd-video-meta-block,
+/* video info, description */ 
+a.yt-simple-endpoint.yt-formatted-string,
+ytd-toggle-button-renderer,
+ytd-button-renderer yt-formatted-string.ytd-button-renderer,
+#owner-sub-count.ytd-video-owner-renderer,
+.more-button.ytd-video-secondary-info-renderer,
+/* comments */
+#icon-label.yt-dropdown-menu,
+.count-text.ytd-comments-header-renderer,
+#count.ytd-comments-header-renderer,
+ytd-button-renderer #button.ytd-button-renderer,
+#author-text.yt-simple-endpoint.ytd-comment-renderer,
+#vote-count-middle.ytd-comment-action-buttons-renderer,
+.more-button.ytd-comment {
+   font-size:var(--ytd-user-comment_-_font-size);
+   font-family:var(--font-insert) !important;
+   font-weight:normal;
+}
+
