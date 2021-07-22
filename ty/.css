@@ -1,0 +1,87 @@
+/*
+author 		github.com/lierante
+repository	github.com/lierante/caramel
+created		07/20/2021
+published	07/22/2021
+license		MIT License
+*/
+
+:root {    
+    --caramel-1:#eee8dd;
+    --caramel-2:#e2dbcc;
+    --caramel-3:#b1a592;
+    --caramel-4:#837a6c;
+    
+    --caramel-5:#d8d1c3;
+    --caramel-6:#cabfaa;
+    
+    --ff-toolbar:#5a503f;
+}
+
+#header,
+#footer {
+    visibility:hidden;
+}
+
+#command-center {
+    margin-top:100px;
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translateY(-2vh);
+}
+
+.bar #right-wing {
+    width:45px;
+    position:absolute;
+    margin-left:-45px;
+}
+
+#right-wing,
+#left-wing {
+    color: #1a1a1a;
+}
+
+body {
+    font-family: CozetteVector;
+    background-color:var(--caramel-1);
+}
+
+.highlight {
+    color:var(--ff-toolbar);
+}
+
+.wrong {
+    color: #ebb2b2;
+}
+
+#text-display {
+    color: var(--caramel-4);
+}
+
+#input-field.wrong {
+    background:#e7baba;
+}
+
+#input-field {
+    color: #1a1a1a;
+    background-color:var(--caramel-3); 
+    border:1px solid #000;
+    outline:none;
+    border-radius:5px;
+}
+
+#typing-area {
+    margin-top:-5px;
+    margin-left:10px;
+    background:var(--caramel-5);
+    border:1px solid #000;
+}
+
+#redo-button {
+    background: var(--caramel-4);
+    color: #1a1a1a;
+      border:1px solid #000;
+}
