@@ -11,4 +11,3 @@ Firefox 84 - 87+ (ff folder)
    theme css injector <br>
 - [CozetteVector](https://github.com/slavfox/Cozette/releases) <br>
    theme font family <br>
-
