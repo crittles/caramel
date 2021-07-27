@@ -6,7 +6,7 @@ A theme collection of my custom palette caramel, it is based on the colors of a 
 
 
 ## How?
-Firefox 84 - 87+
+Firefox 84 - 87+ (ff folder)
 - [CozetteVector](https://github.com/slavfox/Cozette/releases) <br>
    theme font family <br>
 
