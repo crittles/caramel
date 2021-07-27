@@ -5,7 +5,7 @@ A theme collection of my custom palette caramel, it is based on the colors of a 
 ![img](preview.gif)
 
 
-## how to apply?
+## How to apply?
 Firefox 84 - 87+ (ff folder)
 - [Stylus](https://addons.mozilla.org/de/firefox/addon/styl-us/) <br>
    theme css injector <br>
