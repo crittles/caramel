@@ -7,6 +7,8 @@ A theme collection of my custom palette caramel, it is based on the colors of a 
 
 ## How?
 Firefox 84 - 87+ (ff folder)
+- [Stylus](https://addons.mozilla.org/de/firefox/addon/styl-us/) <br>
+   theme css injector <br>
 - [CozetteVector](https://github.com/slavfox/Cozette/releases) <br>
    theme font family <br>
 
