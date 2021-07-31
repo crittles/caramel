@@ -73,7 +73,7 @@ image#pageActionButton,
 #tracking-protection-icon-container, #identity-box,
 #urlbar-zoom-button,
 .urlbarView-favicon, .urlbarView-type-icon {
-  display: none;
+  display: block;
 }
 
 .urlbarView-url, .search-panel-one-offs-container {
